@@ -45,3 +45,8 @@ with open("test_text.txt") as data:
         if line_counter == 5:
             print(line[4])
         line_counter+=1
+        
+        
+# Ok Wolf, you moron. You can do this as list comprehension
+with open("test_text.txt") as data:
+    x = [print(line[4], "+")for line in data if line == 4]
