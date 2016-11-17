@@ -79,6 +79,7 @@ print(gompertz(2, 3, 4, 5))
 #* *
 #*****
 #(Hint: what does print("*" + "" + "*"*4) give you?)
+
 # NOte the funky numbers are to get it to look pretty with command line run
 
 def make_box(height, width):
@@ -90,9 +91,18 @@ make_box(17,19)
 
 # 10. Implement a point class that holds x and y information for a point in space. 
 # Note that I am not asking you to plot that line.
+#11. Write a distance method that calculates the distance between two points in space.
+# Note that I am note (yet) taking intyo account negative values
 
-class points_in_space(x,y):
+class points_in_space:
     def __init__(self, lat = 0, lon = 0):
         self.lat, self.lon  = lat, lon
-
+    def dist(point_a, point_b):
+        return math.sqrt((point_a**2)*(point_b**2))
+    
+# 12. Implement a line class that takes two point objects and makes a line between them. 
+# Note that I am not asking you to plot that line.   
+class line_bet_points:
+    def __inti__(self, point_a, point_b):
+        self.point_a, self_point_b = point_a, point_b
 
