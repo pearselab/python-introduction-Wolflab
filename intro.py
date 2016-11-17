@@ -106,3 +106,5 @@ class line_bet_points:
     def __inti__(self, point_a, point_b):
         self.point_a, self_point_b = point_a, point_b
 
+# Sorry, but I don't understand the question. I don't see how making a class can make the line. Surely the
+# making of a line is a method. I am missing some abstract thought process as usual.
