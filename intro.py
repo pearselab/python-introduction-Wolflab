@@ -87,4 +87,12 @@ def make_box(height, width):
         print("*", " " * (width-4), "*")
     print(width * "*") # bottom line
 make_box(17,19)
-    
+
+# 10. Implement a point class that holds x and y information for a point in space. 
+# Note that I am not asking you to plot that line.
+
+class points_in_space(x,y):
+    def __init__(self, lat = 0, lon = 0):
+        self.lat, self.lon  = lat, lon
+
+
