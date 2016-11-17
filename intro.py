@@ -1,4 +1,5 @@
 from __future__ import print_function
+import math
 #1. Write a loop that prints out the numbers from 20 to 10
 
 for i in range(20,9, -1):
@@ -66,3 +67,24 @@ for i in range(1,20):
 # 8. A biologist is modelling population growth using a Gompertz curve, which is defined as y(t) = a.e−b.e−c.t
 # where y is population size, t is time, a and b are parameters, and e is the exponential function. Write
 # them a function that calculates population size at any time for any values of its parameters.
+
+def gompertz(a, b, c, t):
+    return(a * math.exp(-b * math.exp(-c * t)))
+
+print(gompertz(2, 3, 4, 5))
+
+
+#9. Write a function that draws boxes of a specified width and height that look like this (height 3, width 5):
+#*****
+#* *
+#*****
+#(Hint: what does print("*" + "" + "*"*4) give you?)
+# NOte the funky numbers are to get it to look pretty with command line run
+
+def make_box(height, width):
+    print(width * "*") # top line
+    for row in range(height - 2): # middle bit
+        print("*", " " * (width-4), "*")
+    print(width * "*") # bottom line
+make_box(17,19)
+    
