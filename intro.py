@@ -20,14 +20,11 @@ print(even_list)
 #4. Write a list comprehension that prints out only the numbers from 20 to 10 that are even
 x = [print(i) for i in range(20,9,-1) if i%2 == 0]
 
-def is_prime(numb):
-    for i in range(numb-1,2,-1):
-        if numb % i == 0:
-            answer = False
-            break
-        else:
-            answer = True
-    return answer
+def is_prime(n):
+    for i in range(3, n):
+        if n % i == 0:
+            return False
+    return True
  
 # Let us  test            
 x = 199
@@ -49,4 +46,23 @@ with open("test_text.txt") as data:
         
 # Ok Wolf, you moron. You can do this as list comprehension
 with open("test_text.txt") as data:
-    x = [print(line[4], "+")for line in data if line == 4]
+    x = [print(line[4])for line in data if line == 4]
+
+# 7. Write a loop that prints out the numbers from 1 to 20, printing “Good: NUMBER” if the number is
+# divisible by five and “Job: NUMBER” if then number is prime, and nothing otherwise.
+
+def is_div_by_five(x):
+    return True if x%5 == 0 else False
+
+for i in range(1,20):
+    if i == 5:
+        print("good job ", i)
+    elif is_div_by_five(i):
+        print("good ", i)
+    elif is_prime(i):
+        print("job ", i)
+
+
+# 8. A biologist is modelling population growth using a Gompertz curve, which is defined as y(t) = a.e−b.e−c.t
+# where y is population size, t is time, a and b are parameters, and e is the exponential function. Write
+# them a function that calculates population size at any time for any values of its parameters.
