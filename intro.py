@@ -91,21 +91,33 @@ make_box(17,19)
 
 # 10. Implement a point class that holds x and y information for a point in space. 
 # Note that I am not asking you to plot that line.
-#11. Write a distance method that calculates the distance between two points in space.
-# Note that I am note (yet) taking intyo account negative values
+# 11. Write a distance method that calculates the distance between two points in space.
+# Note that I am not (yet) taking into account negative values
 
 class points_in_space:
     def __init__(self, lat = 0, lon = 0):
         self.lat, self.lon  = lat, lon
 
+class two_points:
+    def __init__(self, a, b):
+        self.a, self.b = a, b
+    def dist(a, b):
+        return math.sqrt(((a.lat - b.lat)**2)*(a.lon - b.lon)**2)     
+
 point_a = points_in_space(6.0, 7.5) 
 point_b = points_in_space(2.4, 16.3)
-def dist(point_a, point_b):
-    return math.sqrt(((point_a.lat - point_b.lat)**2)*(point_a.lon - point_b.lon)**2)
 
-print(dist(point_a, point_b))   
+points_list = two_points(point_a, point_b)
 
-# Cannot get distance method to run within the class. Why would I WANT a method?
+#def dist(a, b):
+    #return math.sqrt(((a.lat - b.lat)**2)*(a.lon - b.lon)**2)
+
+print(points_list.dist)  
+
+# Cannot get distance method to run within the class. Why would I WANT a method? How does this make the code
+# easier to read? 
+# Do we need to create another class for TWO points?
+
 
 # 12. Implement a line class that takes two point objects and makes a line between them. 
 # Note that I am not asking you to plot that line.   
@@ -114,4 +126,4 @@ class line_bet_points:
         return line
 
 # Sorry, but I don't understand the question. I don't see how making a class can make the line. Surely the
-# making of a line is a method. I am missing some abstract thought process as usual.
+# making of a line is a method? I am missing some abstract thought process as usual.
