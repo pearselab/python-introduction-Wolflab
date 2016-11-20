@@ -97,14 +97,21 @@ make_box(17,19)
 class points_in_space:
     def __init__(self, lat = 0, lon = 0):
         self.lat, self.lon  = lat, lon
-    def dist(point_a, point_b):
-        return math.sqrt((point_a**2)*(point_b**2))
-    
+
+point_a = points_in_space(6.0, 7.5) 
+point_b = points_in_space(2.4, 16.3)
+def dist(point_a, point_b):
+    return math.sqrt(((point_a.lat - point_b.lat)**2)*(point_a.lon - point_b.lon)**2)
+
+print(dist(point_a, point_b))   
+
+# Cannot get distance method to run within the class. Why would I WANT a method?
+
 # 12. Implement a line class that takes two point objects and makes a line between them. 
 # Note that I am not asking you to plot that line.   
 class line_bet_points:
     def __inti__(self, point_a, point_b):
-        self.point_a, self_point_b = point_a, point_b
+        return line
 
 # Sorry, but I don't understand the question. I don't see how making a class can make the line. Surely the
 # making of a line is a method. I am missing some abstract thought process as usual.
