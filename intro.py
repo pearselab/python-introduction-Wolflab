@@ -106,17 +106,16 @@ class two_points:
 
 point_a = points_in_space(6.0, 7.5) 
 point_b = points_in_space(2.4, 16.3)
-
-points_list = two_points(point_a, point_b)
+# The above seems to work nicely
+# But cannot find a way to generate method WITH the class to work on TWO points
+# Two solutions. One is to make an external function. Works perfectly.
+# Or create another class called two-points
 
 #def dist(a, b):
     #return math.sqrt(((a.lat - b.lat)**2)*(a.lon - b.lon)**2)
-
+    
+points_list = two_points(point_a, point_b)
 print(points_list.dist)  
-
-# Cannot get distance method to run within the class. Why would I WANT a method? How does this make the code
-# easier to read? 
-# Do we need to create another class for TWO points?
 
 
 # 12. Implement a line class that takes two point objects and makes a line between them. 
@@ -125,5 +124,3 @@ class line_bet_points:
     def __inti__(self, point_a, point_b):
         return line
 
-# Sorry, but I don't understand the question. I don't see how making a class can make the line. Surely the
-# making of a line is a method? I am missing some abstract thought process as usual.
